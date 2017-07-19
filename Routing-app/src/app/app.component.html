@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default navabar-fixed-top">
+  <div class="container">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/']"> Home </a></li>
+        <li><a [routerLink]="['/AddMovie']"> Add Movie</a></li>
+        <li><a [routerLink]="['/ListMovie']"> Show Movie List</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navigation -->
+<div class="jumbotron">
+  <router-outlet>
+
+  </router-outlet>
+</div>
+<!-- Main Component Display -->
