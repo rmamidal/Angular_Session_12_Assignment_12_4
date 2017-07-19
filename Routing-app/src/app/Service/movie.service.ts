@@ -11,6 +11,12 @@ export class MovieService {
         return Promise.resolve(MOVIES);
     }
 
+    // Get Movie Details by selected Id.
+    getMovieDetails(id: number): Promise<Movie> {
+        return this.getMovieList()
+        .then(movies => movies.find(movie => movie.id === id));
+    }
+
     // Add movie data.
     addMovie(currentMovie: Movie) {
         this.getMovieList().then(movieList => {

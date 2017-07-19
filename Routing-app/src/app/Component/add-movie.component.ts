@@ -45,7 +45,7 @@ export class AddMovieComponent {
     // Adding movie to movie list
     addMovie() {
         this._movieService.addMovie(this.currentMovie);
-        this._router.navigate(["/list-movie"]); // Redirect to Movie list page.
+        this._router.navigate(["/ListMovie"]); // Redirect to Movie list page.
         this.currentMovie = new Movie(); // Clearing Object.
         this.formMovie.reset();; // Reset form after submiting Movie info.
     }

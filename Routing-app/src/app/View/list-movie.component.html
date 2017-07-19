@@ -15,16 +15,18 @@
                         <th> Movie Description</th>
                         <th> Rating</th>
                         <th> Release Date</th>
+                        <th> Action</th>
                     </tr>
                     <!-- Looping through Movie list-->
                     <tr *ngFor="let movie of (listOfMovies | searchBy : searchMovie); let i=index;">
-                        <td>{{i + 1}}</td>
+                        <td>{{movie.id}}</td>
                         <td>{{movie | json}}</td> <!--Movie details in Json formar-->
                         <td><img [src]="movie.imageUrl" [alt]="movie.name" width="75" /></td>
                         <td>{{movie.name | capitalise}}</td> <!--Movie name in capitalise format-->
                         <td>{{movie.description | capitalise}}</td> <!--Movie description in capitalise format-->
                         <td>{{movie.movieRatings | uppercase}}</td> <!--Movie description in uppercase-->
                         <td>{{movie.releaseDate | date :'shortDate'}}</td> <!-- Formating date using pipes -->
+                        <td><input type="button" class="btn btn-success" [routerLink]="['/DetailsMovie', movie.id]" value="View Details"></td> <!-- Edit detiails-->
                     </tr>
                 </table>
             </div>

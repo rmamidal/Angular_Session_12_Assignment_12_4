@@ -6,7 +6,8 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
 import { AddMovieComponent } from './Component/add-movie.component';
 import { ListMovieComponent } from './Component/list-movie.component';
-import { PageNotFoundComponent } from './Component/page-not-found.component'
+import { DetailsMovieComponent } from './Component/details-movie.component';
+import { PageNotFoundComponent } from './Component/page-not-found.component';
 import { SearchPipe } from "./Pipe/search.pipe";
 import { ApplicationRoutes } from './app.routes'
 import { CapitalisePipe } from "./Pipe/capitalise.pipe";
@@ -17,6 +18,7 @@ import { CapitalisePipe } from "./Pipe/capitalise.pipe";
     AppComponent,
     AddMovieComponent,
     ListMovieComponent,
+    DetailsMovieComponent,
     PageNotFoundComponent,
     SearchPipe,
     CapitalisePipe
